@@ -1,8 +1,8 @@
 /* Fechtbuch – Offline-Speicher für die App-Dateien.
    Speichert nur die App selbst (HTML, Icons, Manifest). Trainingsdaten liegen
    ausschließlich im Browser-Speicher des Geräts und werden nie verschickt. */
-var CACHE = 'fechtbuch-36f8aa13a9';
-var SHELL = ['./', './index.html', './manifest.webmanifest', './apple-touch-icon.png', './icon-192.png', './icon-512.png'];
+var CACHE = 'fechtbuch-7ba7b719b2';
+var SHELL = ['./', './index.html', './manifest.webmanifest', './apple-touch-icon.png', './favicon-64.png', './icon-192.png', './icon-512.png'];
 
 self.addEventListener('install', function (e) {
   e.waitUntil(caches.open(CACHE).then(function (c) { return c.addAll(SHELL); }).then(function () { return self.skipWaiting(); }));
